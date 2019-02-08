@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController#
 
   def new
-      # nothing to do here!
   end
 
   def create
@@ -9,7 +8,7 @@ class SessionsController < ApplicationController#
       if session[:name] == nil || session[:name] == ""
         redirect_to '/login'
       else
-        redirect_to '/'
+        redirect_to secrets_path
       end
   end
 
